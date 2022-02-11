@@ -1,1 +1,1 @@
-<h1> Bienvenue sur la boutique !</h1>
+<h2 class="text-center py-4"> Page d'accueil de la boutique </h2>

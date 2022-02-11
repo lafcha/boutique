@@ -76,7 +76,7 @@ INSERT INTO `order_has_product` (`order_id`, `product_id`, `quantity`, `order_pr
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
                            `id` int(11) NOT NULL AUTO_INCREMENT,
-                           `title` varchar(45) NOT NULL,
+                           `name` varchar(45) NOT NULL,
                            `description` longtext NOT NULL,
                            `price` float NOT NULL,
                            `weight` float NOT NULL,
@@ -88,10 +88,3 @@ CREATE TABLE `product` (
                            KEY `fk_product_category1_idx` (`category_id`),
                            CONSTRAINT `fk_product_category1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-INSERT INTO `product` (`id`, `title`, `description`, `price`, `weight`, `tva`, `stock`, `category_id`) VALUES
-                                                                                                           (1,	'DFDSFS Article 8',	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus dolor, tempus ut mauris id, pretium varius mi. Pellentesque dignissim volutpat risus at auctor. Vestibulum fermentum dignissim nisl a posuere. Mauris dolor turpis, tincidunt id lobortis eu, iaculis eget nibh. Quisque consectetur ante vel leo malesuada, non feugiat ex euismod. Nunc a nibh a nunc elementum viverra. Sed quis sem ac lacus eleifend euismod. ',	15.6,	2.5,	20,	5,	2),
-                                                                                                           (2,	'DFDSFS Article 7',	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus dolor, tempus ut mauris id, pretium varius mi. Pellentesque dignissim volutpat risus at auctor. Vestibulum fermentum dignissim nisl a posuere. Mauris dolor turpis, tincidunt id lobortis eu, iaculis eget nibh. Quisque consectetur ante vel leo malesuada, non feugiat ex euismod. Nunc a nibh a nunc elementum viverra. Sed quis sem ac lacus eleifend euismod. ',	23.5,	22,	5.5,	6,	1),
-                                                                                                           (3,	'DFDSFS Article 6',	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus dolor, tempus ut mauris id, pretium varius mi. Pellentesque dignissim volutpat risus at auctor. ',	8.35,	15,	20,	25,	3);
-
--- 2022-02-11 10:31:21

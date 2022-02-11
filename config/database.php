@@ -1,3 +1,3 @@
 <?php
 
-$bdd = new PDO(new PDO('mysql:host=localhost;dbname=blog', 'charlotte', 'babar'));
+$bdd = new PDO('mysql:host=localhost;dbname=boutique', 'charlotte', 'marmotte26');
