@@ -1,0 +1,1 @@
+<p>Ceci est la page 404</p>
