@@ -16,9 +16,11 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `category` (`id`, `name`) VALUES
-                                          (1,	'Cat1'),
-                                          (2,	'Cat2'),
-                                          (3,	'Cat3');
+                                          (1,	'Breads'),
+                                          (2,	'Viennoiseries'),
+                                          (3,	'Pastries'),
+                                          (4,	'Snacks'),
+                                          (5,	'Drinks');
 
 DROP TABLE IF EXISTS `client`;
 CREATE TABLE `client` (
@@ -67,11 +69,6 @@ CREATE TABLE `order_has_product` (
                                      CONSTRAINT `fk_order_has_product_product1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `order_has_product` (`order_id`, `product_id`, `quantity`, `order_price`) VALUES
-                                                                                          (1,	1,	12,	20),
-                                                                                          (1,	2,	3,	15.5),
-                                                                                          (1,	3,	1,	22),
-                                                                                          (2,	1,	2,	1);
 
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
@@ -88,3 +85,27 @@ CREATE TABLE `product` (
                            KEY `fk_product_category1_idx` (`category_id`),
                            CONSTRAINT `fk_product_category1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `product` (`id`, `name`, `description`, `price`, `weight`, `tva`, `stock`, `category_id`) VALUES
+                                                                                                          (1,	'Tartes au citron meringuées',	'Pâte sablé croustillante, garnis d\'une crème onctueuse au citron, recouvert d\'un nuage de meringues délicatement brulé.',	2,	170,	0,	50,	3),
+                                                                                                          (2,	'Baguette',	'Pain traditionnel avec une croûte croustillante et une mie moelleuse.\r\n\r\n',	1,	220,	0,	10,	1),
+                                                                                                          (3,	'Flûte',	'Pain fin croustillant à l’extérieur moelleux à l’intérieur.\r\n',	1,	180,	0,	10,	1),
+                                                                                                          (4,	'Pain de Mie ',	'Pain composé essentiellement de mie extrêmement moelleuse. Idéale pour les personnes n’aimant pas une croûte dûre.',	1,	300,	0,	8,	1),
+                                                                                                          (5,	'Pain aux Céréales',	'Pain croustillant agrémenter de petites graines (seigle, avoine…)\r\n\r\n',	1,	250,	0,	8,	1),
+                                                                                                          (6,	'Pain Complet',	' Pain réaliser avec de la farine complète.',	1,	250,	0,	8,	1),
+                                                                                                          (7,	'Pain au chocolat ',	'Duo de barres chocolaté enroulé d’une délicieuse pâte feuilletée.',	1,	110,	0,	15,	2),
+                                                                                                          (8,	'Croissant',	'Triangles de pâtes feuilleté pur beurre rouler.',	1,	90,	0,	15,	2),
+                                                                                                          (9,	' Pains au Raisins',	'brioche roulé agrémenté de raisins secs et de crème pâtissière',	1,	120,	0,	10,	2),
+                                                                                                          (10,	'Beignet framboise',	'Boules de pâte moelleuse, frit fourré à la confiture de framboises maison.',	1,	90,	0,	10,	2),
+                                                                                                          (11,	'Chausson aux pommes',	'Chausson feuilleté garni d’une compote de pomme à la cannelle.',	1,	135,	0,	10,	2),
+                                                                                                          (12,	'Succés au chocolat',	'Ganache au chocolat noir 75% déposé sur un Biscuit dacquoise (poudre de noisettes) moelleux, enrober d’une couche fin de chcolat craquant.',	2,	80,	0,	8,	3),
+                                                                                                          (13,	'Milles-Feuilles',	'Pâtisserie faite de trois couches de pâte feuilletée et deux couches de crème pâtissière à la vanille. Décorer de sucre glace.',	2,	80,	0,	8,	3),
+                                                                                                          (15,	'Opéra',	'Entremets à base de crème au beurre qui combine la douceur du chocolat et le caractère du café.',	2,	100,	0,	6,	3),
+                                                                                                          (16,	'Quiche',	'Tarte salées garnies d’une préparation à base d\'œuf et de crème, de jambon et de fromage.',	2,	125,	0,	10,	4),
+                                                                                                          (17,	'Pizza chorizo',	'Pâte à pain étalement finement, recouvert de sauce tomates légèrement acidulée, de tranches de chorizo doux, de mozzarella et de gruyère râpé.',	2,	90,	0,	12,	4),
+                                                                                                          (18,	'Feuilleté chèvre',	'Carré de pâte feuilleté, cuit au four, garnis d’une tranche de buche de chèvre de la Ferme Chevre&co, d’herbe de provence et d’un filet d’huile d’olive.',	2,	110,	0,	6,	4),
+                                                                                                          (19,	'Fougasse aux olives',	'Pain à la croûte molle parfumé à l\'huile d\'olive, garnis de tapenade et de brisure d’olives.',	2,	160,	0,	8,	4),
+                                                                                                          (20,	'Canette 33cl',	'Une petite soif? Laissez-vous tentez par une petite canette déshaltérente. (Coca-cola, Oasis, Fanta, Ice-Tea, evian...)',	1,	350,	0,	30,	5),
+                                                                                                          (21,	'Canette 50cl',	'Une moyenne soif? Laissez-vous tentez par une  canette 50cl déshaltérente. (Coca-cola, Oasis, Fanta, Ice-Tea, evian...)',	1,	500,	0,	35,	5);
+
+-- 2022-02-14 09:05:35
