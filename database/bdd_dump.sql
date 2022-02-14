@@ -37,7 +37,24 @@ CREATE TABLE `client` (
 INSERT INTO `client` (`id`, `name`, `firstname`, `password`, `email`) VALUES
                                                                           (1,	'Charlie',	NULL,	'sdfds',	'sdfsdf@gmail.com'),
                                                                           (2,	'Hugo',	'sdfsdf',	'sdfdsdf',	'hhh@gmail.com'),
-                                                                          (3,	'Toto',	NULL,	'qbga',	'ttt@gmail.co');
+                                                                          (3,	'Toto',	NULL,	'qbga',	'ttt@gmail.co'),
+                                                                          (4,	'Abrahart',	'Brandy',	'aqRZFG5jPr',	'babrahart3@pen.io'),
+                                                                          (5,	'Wivell',	'Sumner',	'BHfgZpjV',	'swivell4@skyrock.com'),
+                                                                          (6,	'Maddra',	'Ertha',	'R3XDPCmrSIH',	'emaddra5@intel.com'),
+                                                                          (7,	'Quinnet',	'Dillie',	'nDiGum',	'dquinnet6@amazon.com'),
+                                                                          (8,	'Starte',	'Rayner',	'ccZda6hCv',	'rstarte7@dailymail.co.uk'),
+                                                                          (9,	'Knowlson',	'Jodi',	'XX8Em3Et',	'jknowlson8@hc360.com'),
+                                                                          (10,	'Duny',	'Helaina',	'tlrQ2G',	'hduny9@wufoo.com'),
+                                                                          (11,	'Tuddall',	'Fiann',	'2VLxnJmn',	'ftuddalla@npr.org'),
+                                                                          (12,	'Clemmey',	'Artur',	'lchojcHnbE',	'aclemmeyb@nsw.gov.au'),
+                                                                          (13,	'Klosser',	'Roxine',	'92qLsZ',	'rklosserc@hatena.ne.jp'),
+                                                                          (14,	'Dudhill',	'Kate',	'lsiKJrBtLb',	'kdudhilld@state.gov'),
+                                                                          (15,	'Jillett',	'Etan',	'gpjIeEdK',	'ejillette@liveinternet.ru'),
+                                                                          (16,	'Meenehan',	'Royal',	'UjiHyVQ',	'rmeenehanf@taobao.com'),
+                                                                          (17,	'Asquez',	'Sileas',	'yqZbGBSiI',	'sasquezg@mtv.com'),
+                                                                          (18,	'Ambrosini',	'Fernande',	'EV5KnUjWgzK',	'fambrosinih@kickstarter.com'),
+                                                                          (19,	'O\'Connor',	'Towney',	'pr4tLhdp',	'toconnori@time.com'),
+                                                                          (20,	'Winckles',	'Stephie',	'q0IJYApY',	'swincklesj@google.co.jp');
 
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order` (
@@ -108,4 +125,4 @@ INSERT INTO `product` (`id`, `name`, `description`, `price`, `weight`, `tva`, `s
                                                                                                           (20,	'Canette 33cl',	'Une petite soif? Laissez-vous tentez par une petite canette déshaltérente. (Coca-cola, Oasis, Fanta, Ice-Tea, evian...)',	1,	350,	0,	30,	5),
                                                                                                           (21,	'Canette 50cl',	'Une moyenne soif? Laissez-vous tentez par une  canette 50cl déshaltérente. (Coca-cola, Oasis, Fanta, Ice-Tea, evian...)',	1,	500,	0,	35,	5);
 
--- 2022-02-14 09:05:35
+-- 2022-02-14 09:16:23
