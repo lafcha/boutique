@@ -1,15 +1,56 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #bfc0c0;
-
+    background-color: #FCF8EE;
+    color: #371706;
 }
 h1 {
     font-weight: bold;
     color : white;
 }
-#header-div {
-    background-color: #2d3142;
+
+a {
+    color : inherit;
 }
-.container{
-    color : #2d3142;
+header {
+    height: 233px;
+    background-color: #371706;
+}
+/* PRODUCT CARD*/
+
+
+.cart-pill {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top : 2px;
+    font-size: 1.3rem;
+    background: url('https://api.iconify.design/bxs/cart-add.svg?color=%23fcf8ee&width=20&height=20') no-repeat center center  #8D4317  ;
+    border: none;
+}
+
+.cart-pill:hover {
+    background-color: #371706;
+}
+.cart-pill a:hover{
+    color: #FCF8EE;
+}
+
+/*COLORS*/
+
+/* Backgrounds*/
+.bg-primary {
+    background-color: #371706 !important;
+}
+
+.bg-secondary {
+    background-color: #8D4317 !important;
+}
+
+.btn-primary {
+    background-color: #371706 !important;
+}
+
+/* Texts */
+.text-light {
+    color : #FCF8EE;
 }
