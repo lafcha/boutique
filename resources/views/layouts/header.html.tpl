@@ -14,7 +14,7 @@
     <title>Boutique</title>
 </head>
 <body>
-<header>
+<header class="h-25">
     <div id="header-div">
         <h1 class="h1 text-center">Ma Boutique</h1>
     </div>
