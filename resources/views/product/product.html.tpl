@@ -1,5 +1,5 @@
 <div class="container col-12">
-    <h2 class="py-4"><?= $productData['name']? ><span class="badge bg-primary"><?= $productData['category']? ></span></h2>
+    <h2 class="py-4"><?= $productData['name']?><span class="badge bg-primary"><?= $productData['category']?></span></h2>
     <div class="d-flex">
         <div class="col-6">
             <img alt="photo" src="./resources/img/img.jpg">

@@ -1,8 +1,12 @@
 <?php
 include('./app/persistences/productData.php');
 
-//$productData = getProduct($bdd, $filterId);
+$productDataFromBDD = getProduct($bdd, $filterId);
 
-//$priceWithTax = $productData['price'] + ($productData['price'] * $productData['tva'])/100;
+$productData = $productDataFromBDD[0];
+
+$priceWithTax = $productData['price'] + ($productData['price'] * $productData['tva'])/100;
+
+
 
 include ('./resources/views/product/product.html.tpl');

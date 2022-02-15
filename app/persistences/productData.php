@@ -9,7 +9,7 @@
 function getProduct($bdd, $id)
 {
     $statement = $bdd->prepare(file_get_contents('database/productPage.sql'));
-    $statement->bindValue($id);
+    $statement->bindParam(':id',$id, PDO::PARAM_INT);
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
