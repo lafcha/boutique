@@ -9,7 +9,7 @@ $routes = [
     'productPage' => 'productPageController.php'
 
 ];
-require './resources/views/layouts/header.html.tpl';
+require './resources/views/layouts/header.tpl.php';
 if (isset($filterPage)) {
     if (!$routes[$filterPage]) {
         require './resources/views/errors/404.html.tpl';
@@ -19,4 +19,4 @@ if (isset($filterPage)) {
 } else {
     require('./app/controllers/' . $routes[$filterPage]);
 }
-require  './resources/views/layouts/footer.html.tpl';
+require  './resources/views/layouts/footer.tpl.php';
