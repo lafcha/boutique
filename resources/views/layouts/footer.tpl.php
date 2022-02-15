@@ -18,11 +18,11 @@
       </div>
       <div class="row justify-content-center py-3 w-50">
         <a class="col-6 col-lg-4 d-flex justify-content-center" href="https://fr.linkedin.com/"><img
-            src="image/linkedin.png" alt="Lien Linkedin" class="w-50"></a>
+            src="/resources/img/linkedin.png" alt="Lien Linkedin" class="w-50"></a>
         <a class="col-6 col-lg-4 d-flex justify-content-center" href="https://www.instagram.com/?hl=fr"><img
-            src="image/instagram.png" alt="Lien Instagram" class="w-50"></a>
+            src="/resources/img/instagram.png" alt="Lien Instagram" class="w-50"></a>
         <a class="col-6 col-lg-4 d-flex justify-content-center" href="https://twitter.com/?lang=fr"><img
-            src="image/twitter.png" alt="Lien Twitter" class="w-50"></a>
+            src="/resources/img/twitter.png" alt="Lien Twitter" class="w-50"></a>
       </div>
     </div>
     <div>
