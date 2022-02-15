@@ -50,6 +50,16 @@ header {
     background-color: #371706 !important;
 }
 
+#product-add-btn {
+    font-weight: bold;
+    background: url('https://api.iconify.design/bxs/cart-add.svg?color=%23fcf8ee&width=20&height=20') no-repeat 5px center  #8D4317  ;
+    width: 200px;
+}
+
+#product-add-btn:hover {
+    background-color: #371706;
+}
+
 /* Texts */
 .text-light {
     color : #FCF8EE;
