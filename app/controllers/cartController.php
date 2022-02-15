@@ -1,8 +1,8 @@
 <?php
 include('./app/persistences/cart.php');
+
 initCart();
 fakeCart();
-var_dump($_SESSION);
 $totalCart=totalCart($bdd);
 
 

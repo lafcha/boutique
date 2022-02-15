@@ -17,7 +17,6 @@ function fakeCart()
     $_SESSION['cart']["3"] = 4;
     $_SESSION['cart']["5"] = 2;
     $_SESSION['cart']["7"] = 3;
-    $_SESSION['cart']["8"] = 4;
 }
 
 /**
@@ -27,7 +26,9 @@ function fakeCart()
  */
 function totalCart($bdd)
 {
+
     var_dump($_SESSION);
+
     $resultquery = $bdd->query("SELECT id, (1+tva)*price AS prixTTC FROM product WHERE id in (". implode(",",array_keys($_SESSION['cart'])) .")");
     $data = $resultquery->fetchAll();
 
