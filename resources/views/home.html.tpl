@@ -5,7 +5,7 @@
         <?php foreach ($productsData as $index => $product): ?>
         <div class="col">
             <div class="card product-card h-100">
-                <img class="card-img-top" src="resources/img/products/product_001.jpg" alt="Card image cap">
+                <img class="card-img-top" src="storage/app/products/product_<?= $product['id']?>.jpg" alt="Card image cap">
                 <div class="card-body p-3">
                     <p class="fst-italic mb-0"><?= $product['category'] ?></p>
                     <h5 class="card-title"><?= $product['name'] ?></h5>
