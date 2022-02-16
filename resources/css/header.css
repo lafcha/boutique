@@ -1,0 +1,24 @@
+.bg-primary {
+    background-color: #6e2e0b !important;
+}
+
+.text-success{
+    color: #f0db9d !important;
+}
+.cart-pill2 {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top : 2px;
+    font-size: 1.3rem;
+    background: url('https://api.iconify.design/bxs/cart-alt.svg?color=%23f0db9d&width=40&height=40') no-repeat center center / contain;
+
+}
+
+.cart-pill2:hover {
+    background-color: #371706;
+}
+.cart-pill2 a:hover{
+    color: #FCF8EE;
+}
+
