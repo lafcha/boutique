@@ -1,11 +1,15 @@
 
+<<<<<<< HEAD
 <h1 class="text-center text-primary">PANIER</h1>
 
 <?php
 
 foreach ( $productsInCart as $product) :
 
+
 ?>
+    <h2 class="text-center">PANIER</h2>
+
 <div class="card" >
     <div class="card-body">
         <h5 class="card-title"><?=$product['name'];?></h5>

@@ -22,7 +22,7 @@
 
 
 <header class="p-3 bg-primary d-flex justify-content-between">
-    <div id="logo"><a href="http://boutique.local/"><img class="w-75" src="/resources/img/logoboutique.png" alt="Logo"></a></div>
+    <div id="logo"><a href="/index.php"><img class="w-75" src="/resources/img/logoboutique.png" alt="Logo"></a></div>
     <div id="navbar">
 
         <nav class="navbar navbar-expand-lg navbar-light d-flex flex-row flex translate-middle-y mt-5">

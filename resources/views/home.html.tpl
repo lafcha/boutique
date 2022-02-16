@@ -1,5 +1,5 @@
 <h2 class="text-center py-4"> Nos derniers produits </h2>
-
+<?php xdebug_var_dump($_SESSION) ?>
 <div class="container">
     <div class="row row-cols-1 row-cols-md-4 g-3">
         <?php foreach ($productsData as $index => $product): ?>
@@ -15,13 +15,14 @@
                         <form action="/index.php?action=cart" method="POST" class="col-9 d-flex justify-content-end">
                             <label for="quantity">
                                 <div class="col-9">
-                                    <input id="quantity" type="number" class="form-control">
+                                    <input id="quantity" type="number" class="form-control" name="quantity">
                                 </div>
                             </label>
                             <div class="col-3">
                                 <input type="submit" class="rounded-circle secondary text-light cart-pill form-control"
                                        value="">
                             </div>
+                            <input type="hidden" id="productId" name="productId" value="<?= $product['id']?>">
                         </form>
                     </div>
                 </div>
