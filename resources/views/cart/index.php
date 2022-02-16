@@ -1,9 +1,9 @@
 
-<h1 class="text-center">PANIER</h1>
-
+<h2 class="text-center">PANIER</h2>
+<?php var_dump($_SESSION) ?>
 <?php
-
 //for($i=0, $_SESSION['cart'][$i], $i . 1) :
+
 
 ?>
 <div class="card" >

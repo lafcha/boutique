@@ -27,8 +27,6 @@ function fakeCart()
 function totalCart($bdd)
 {
 
-    var_dump($_SESSION);
-
     $resultquery = $bdd->query("SELECT id, (1+tva)*price AS prixTTC FROM product WHERE id in (". implode(",",array_keys($_SESSION['cart'])) .")");
     $data = $resultquery->fetchAll();
 
@@ -52,10 +50,11 @@ function totalCart($bdd)
  */
 function addToCart ($productId, $quantity) {
 
-    if($_SESSION['cart'][$productId]) {
+if(array_key_exists($productId, $_SESSION['cart'])) {
         $_SESSION['cart'][$productId] = $_SESSION['cart'][$productId] + $quantity;
     } else {
         $_SESSION['cart'][$productId]= $quantity;
+
     }
 
 }
