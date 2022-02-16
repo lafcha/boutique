@@ -44,3 +44,18 @@ function totalCart($bdd)
 
     return $result;
 }
+
+/**
+ * @param $productId int Id of the product added to the cart
+ * @param $quantity int Quantity of the product added to the cart
+ * @return void adds or modify the line in the global variable $_SESSION['cart']['idOfTheProduct'] = quantity
+ */
+function addToCart ($productId, $quantity) {
+
+    if($_SESSION['cart'][$productId]) {
+        $_SESSION['cart'][$productId] = $_SESSION['cart'][$productId] + $quantity;
+    } else {
+        $_SESSION['cart'][$productId]= $quantity;
+    }
+
+}
