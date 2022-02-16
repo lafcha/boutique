@@ -22,7 +22,7 @@
 
 
 <header class="p-3 bg-primary d-flex justify-content-between">
-    <div id="logo"><img class="w-75" src="/resources/img/logoboutique.png" alt="Logo"></div>
+    <div id="logo"><a href="http://boutique.local/"><img class="w-75" src="/resources/img/logoboutique.png" alt="Logo"></a></div>
     <div id="navbar">
 
         <nav class="navbar navbar-expand-lg navbar-light d-flex flex-row flex translate-middle-y mt-5">
@@ -35,7 +35,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($breads as $rows => $bread) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $filterId ?>"><?= $bread['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id'] ?>"><?= $bread['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -48,7 +48,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($viennoiseries as $rows => $viennoiserie) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $filterId ?>"><?= $viennoiserie['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id'] ?>"><?= $viennoiserie['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -61,7 +61,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($pastries as $rows => $pastrie) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $filterId ?>"><?= $pastrie['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id'] ?>"><?= $pastrie['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -74,7 +74,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($snacks as $rows => $snack) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $filterId ?>"><?= $snack['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id']?>"><?= $snack['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -87,7 +87,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($drinks as $rows => $drink) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $filterId ?>"><?= $drink['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id']?>"><?= $drink['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>

@@ -20,7 +20,7 @@
                             </label>
                             <div class="col-3">
                                 <input type="submit" class="rounded-circle secondary text-light cart-pill form-control"
-                                       value=""></input>
+                                       value="">
                             </div>
                         </form>
                     </div>
