@@ -14,3 +14,10 @@ function getProduct($bdd, $id)
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+function getLastProducts ($bdd)
+{
+    $statement = $bdd->prepare(file_get_contents('database/lastProducts.sql'));
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
