@@ -1,5 +1,5 @@
 
-<h1 class="text-center">PANIER</h1>
+<h1 class="text-center text-primary">PANIER</h1>
 
 <?php
 
