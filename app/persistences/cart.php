@@ -27,24 +27,16 @@ function fakeCart()
  */
 function totalCart($bdd)
 {
-    $result = [
-        'quantityTotaleProduct' => 0,
-        'totalPriceCart' => 0,
+    $data = productsInCart($bdd);
+    $totalCart = [
+        "productsQuantity" => 0,
+        "cartTotal" => 0,
     ];
-
-    if(empty($_SESSION['cart'])) {
-        return $result;
-    }
-    $resultquery = $bdd->query("SELECT id, (1+tva)*price AS prixTTC FROM product WHERE id in (". implode(",",array_keys($_SESSION['cart'])) .")");
-    $data = $resultquery->fetchAll();
-
     foreach($data as $product) {
-        $qt = $_SESSION['cart'][$product['id']];
-        $result['quantityTotaleProduct'] += $qt;
-        $result['totalPriceCart'] += $product['prixTTC'] * $qt;
+        $totalCart['productsQuantity'] += $product['quantity'];
+        $totalCart['cartTotal'] += $product['totalPrice'];
     }
-
-    return $result;
+    return $totalCart;
 }
 
 /**
@@ -64,7 +56,7 @@ function productsInCart($bdd){
     foreach($data as $product) {
         $qt = $_SESSION['cart'][$product['id']];
         $result[] = [
-            'id' => $product['id'],
+            'id'=> $product['id'],
             'name' => $product['name'],
             'price' => $product['prixTTC'],
             'quantity' => $qt,
@@ -84,8 +76,6 @@ if ($update ==  1){
     } else {
         $_SESSION['cart'][$id] = $quantity;
     }
-
-}
 }
 */
 function addAndUpdateCart($id,$quantity, $update){
@@ -94,7 +84,6 @@ function addAndUpdateCart($id,$quantity, $update){
         } else {
             $_SESSION['cart'][$id] = $_SESSION['cart'][$id] + $quantity;
         }
-
     }
 
 /**

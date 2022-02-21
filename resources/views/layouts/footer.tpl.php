@@ -1,4 +1,4 @@
-<footer class="bg-primary py-2 container-fluid">
+<footer class="bg-primary py-2 container-fluid mt-5">
     <div class=" d-flex flex-md-row justify-content-md-between flex-column align-items-center">
         <div class="d-flex flex-column align-items-center text-center py-3 text-success w-50">
             <a class="text-success text-decoration-none" href="">Nos pains</a>

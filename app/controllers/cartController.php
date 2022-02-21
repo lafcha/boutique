@@ -3,7 +3,8 @@ include('./app/persistences/cart.php');
 
 if(!isset($_SESSION['cart'])) {
     initCart();
-}
+};
+
 $productsInCart = productsInCart($bdd);
 $totalCart = totalCart($bdd);
 
@@ -35,6 +36,7 @@ if (isset($filteredProductId)) {
         addAndUpdateCart($filteredProductId,$filteredQuantity, $update);
         $productsInCart = productsInCart($bdd);
         $totalCart = totalCart($bdd);
+
         include('./resources/views/cart/index.php');
     }
 } else {
