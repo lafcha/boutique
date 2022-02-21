@@ -1,5 +1,4 @@
 <div class="container col-12">
-    <?php xdebug_var_dump($_SESSION) ?>
     <h2 class="py-4"><?= $productData['name']?>  <span class="badge bg-primary fs-6"><?= $productData['category']?></h2>
    </span>
     <div class="d-flex">
