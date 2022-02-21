@@ -48,7 +48,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($viennoiseries as $rows => $viennoiserie) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id'] ?>"><?= $viennoiserie['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $viennoiserie['id'] ?>"><?= $viennoiserie['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -61,7 +61,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($pastries as $rows => $pastrie) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id'] ?>"><?= $pastrie['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $pastrie['id'] ?>"><?= $pastrie['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -74,7 +74,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($snacks as $rows => $snack) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id']?>"><?= $snack['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $snack['id']?>"><?= $snack['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -87,7 +87,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($drinks as $rows => $drink) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id']?>"><?= $drink['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $drink['id']?>"><?= $drink['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
