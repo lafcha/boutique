@@ -19,7 +19,7 @@ function fakeCart()
     $_SESSION['cart']["7"] = 3;
     $_SESSION['cart']['8'] = 2;
 }
-
+git
 /**
  * Fonction qui retourne un tableau avec le total en € du panier et le nombre de produit pour l'afficher dans le header du site
  * @param $bdd
@@ -27,6 +27,7 @@ function fakeCart()
  */
 function totalCart($bdd)
 {
+
     $resultquery = $bdd->query("SELECT id, (1+tva)*price AS prixTTC FROM product WHERE id in (". implode(",",array_keys($_SESSION['cart'])) .")");
     $data = $resultquery->fetchAll();
 
@@ -69,8 +70,27 @@ function productsInCart($bdd){
 
 }
 
+<<<<<<< HEAD
 function updateCart($bdd,$newDataQuantity){
     $bdd->query("UPDATE order_has_product SET quantity ='$newDataQuantity' where product.id in (". implode(",",array_keys($_SESSION['cart'])) . ")");
 
 
 }
+=======
+
+/*
+ * @param $productId int Id of the product added to the cart
+ * @param $quantity int Quantity of the product added to the cart
+ * @return void adds or modify the line in the global variable $_SESSION['cart']['idOfTheProduct'] = quantity
+ */
+function addToCart ($productId, $quantity) {
+
+if(array_key_exists($productId, $_SESSION['cart'])) {
+        $_SESSION['cart'][$productId] = $_SESSION['cart'][$productId] + $quantity;
+    } else {
+        $_SESSION['cart'][$productId]= $quantity;
+
+    }
+
+}
+>>>>>>> 0de11f4630c5c04b83515917e391f0e8f560417f
