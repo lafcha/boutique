@@ -12,13 +12,14 @@
                     <form action="/index.php?action=cart" method="POST" class="col-9 d-flex">
                         <label for="quantity">
                             <div class="col-7">
-                                <input id="quantity" type="number" class="form-control" required>
+                                <input id="quantity" type="number" class="form-control" name="quantity">
                             </div>
                         </label>
                         <div class="col-6 ">
                             <input type="submit" class="btn btn-secondary" id="product-add-btn"
                                    value="Ajouter au panier" name="submit">
                         </div>
+                        <input type="hidden" id="productId" name="productId" value="<?= $productData['id']?>">
                     </form>
                 </div>
             </div>

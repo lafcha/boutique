@@ -27,24 +27,16 @@ function fakeCart()
  */
 function totalCart($bdd)
 {
-    $result = [
-        'quantityTotaleProduct' => 0,
-        'totalPriceCart' => 0,
+    $data = productsInCart($bdd);
+    $totalCart = [
+        "productsQuantity" => 0,
+        "cartTotal" => 0,
     ];
-
-    if(empty($_SESSION['cart'])) {
-        return $result;
-    }
-    $resultquery = $bdd->query("SELECT id, (1+tva)*price AS prixTTC FROM product WHERE id in (". implode(",",array_keys($_SESSION['cart'])) .")");
-    $data = $resultquery->fetchAll();
-
     foreach($data as $product) {
-        $qt = $_SESSION['cart'][$product['id']];
-        $result['quantityTotaleProduct'] += $qt;
-        $result['totalPriceCart'] += $product['prixTTC'] * $qt;
+        $totalCart['productsQuantity'] += $product['quantity'];
+        $totalCart['cartTotal'] += $product['totalPrice'];
     }
-
-    return $result;
+    return $totalCart;
 }
 
 /**
@@ -64,6 +56,7 @@ function productsInCart($bdd){
     foreach($data as $product) {
         $qt = $_SESSION['cart'][$product['id']];
         $result[] = [
+            'id'=> $product['id'],
             'name' => $product['name'],
             'price' => $product['prixTTC'],
             'quantity' => $qt,
@@ -74,7 +67,25 @@ function productsInCart($bdd){
     return $result;
 
 }
-
+/*
+function updateCart($id,$quantity, $update){
+if ($update ==  1){
+    $_SESSION['cart'][$id]= $quantity;
+}else {
+    if (!array_key_exists($id, $_SESSION['cart'])) {
+        $_SESSION['cart'][$id] = $_SESSION['cart'][$id] + $quantity;
+    } else {
+        $_SESSION['cart'][$id] = $quantity;
+    }
+}
+*/
+function addAndUpdateCart($id,$quantity, $update){
+        if (!array_key_exists($id, $_SESSION['cart']) || ($update ==  1)) {
+            $_SESSION['cart'][$id]= $quantity;
+        } else {
+            $_SESSION['cart'][$id] = $_SESSION['cart'][$id] + $quantity;
+        }
+    }
 
 /**
  * @param $productId int Id of the product added to the cart
@@ -97,3 +108,4 @@ function removeFromCart ($productId, $quantity) {
         unset($_SESSION['cart'][$productId]);
     }
 }
+
