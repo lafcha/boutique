@@ -68,6 +68,12 @@ function productsInCart($bdd){
 
 }
 
+function updateCart($bdd,$newDataQuantity){
+    $bdd->query("UPDATE order_has_product SET quantity ='$newDataQuantity' where product.id in (". implode(",",array_keys($_SESSION['cart'])) . ")");
+
+
+}
+
 
 /**
  * @param $productId int Id of the product added to the cart
@@ -84,3 +90,4 @@ if(array_key_exists($productId, $_SESSION['cart'])) {
     }
 
 }
+
