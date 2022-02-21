@@ -2,6 +2,8 @@
 session_start();
 include ('config/database.php');
 include ('app/persistences/productByCategory.php');
+
+/* PAGES & ROUTES*/
 $filterPage = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_SPECIAL_CHARS);
 $routes = [
     ''  => 'homeController.php',
@@ -10,15 +12,15 @@ $routes = [
     'productPage' => 'productPageController.php',
     'cart'=>'cartController.php',
 ];
-/**
- * Creat variable who call my function for return me all product linked to category
- */
+
+/* HEADER DISPLAY*/
 $breads = printProductByCategory($bdd, 1);
 $viennoiseries = printProductByCategory($bdd, 2);
 $pastries = printProductByCategory($bdd, 3);
 $snacks = printProductByCategory($bdd, 4);
 $drinks = printProductByCategory($bdd, 5);
 
+/*PAGE DISPLAY*/
 require './resources/views/layouts/header.tpl.php';
 if (isset($filterPage)) {
     if (!$routes[$filterPage]) {

@@ -68,6 +68,7 @@ function productsInCart($bdd){
             'price' => $product['prixTTC'],
             'quantity' => $qt,
             'totalPrice' => $product['prixTTC'] * $qt,
+            'id' => $product['id'],
         ];
     }
     return $result;
@@ -85,8 +86,14 @@ function addToCart ($productId, $quantity) {
 if(array_key_exists($productId, $_SESSION['cart'])) {
         $_SESSION['cart'][$productId] = $_SESSION['cart'][$productId] + $quantity;
     } else {
-        $_SESSION['cart'][$productId]= $quantity;
+        $_SESSION['cart'][$productId] = $quantity;
 
     }
 
+}
+
+function removeFromCart ($productId, $quantity) {
+    if($quantity === 0) {
+        unset($_SESSION['cart'][$productId]);
+    }
 }
