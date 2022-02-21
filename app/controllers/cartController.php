@@ -3,9 +3,10 @@ include('./app/persistences/cart.php');
 
 if(!isset($_SESSION['cart'])) {
     initCart();
-}
+};
 
-
+xdebug_var_dump($_POST ['productId']);
+xdebug_var_dump($_SESSION['cart']);
 $productsInCart = productsInCart($bdd);
 $totalCart = totalCart($bdd);
 
@@ -25,6 +26,9 @@ if (isset($filteredProductId)) {
         addToCart($filteredProductId,$filteredQuantity );
         $productsInCart = productsInCart($bdd);
         $totalCart = totalCart($bdd);
+
+        xdebug_var_dump($_SESSION['cart']);
+
         include('./resources/views/cart/index.php');
     }
 } else {
