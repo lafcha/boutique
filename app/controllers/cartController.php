@@ -8,16 +8,6 @@ $productsInCart = productsInCart($bdd);
 $totalCart = totalCart($bdd);
 
 
-<<<<<<< HEAD
-/** Update quantity's cart **/
-$refreshQuantity = filter_input(INPUT_POST, 'Submit');
-$newDataQuantity = filter_input(INPUT_POST, 'quantity');
-$updateCartQuantity = updateCart($bdd,$newDataQuantity);
-
-
-
-include('./resources/views/cart/index.php');
-=======
 // --- ADD TO CART --- //
 
 // Input filtration
@@ -38,8 +28,3 @@ if (isset($filteredProductId)) {
 } else {
     include('./resources/views/cart/index.php');
 }
-<<<<<<< HEAD
-include('./resources/views/cart/index.php');
->>>>>>> 0de11f4630c5c04b83515917e391f0e8f560417f
-=======
->>>>>>> a5296e570826d5f821bc879c9205c6cd785a1da7
