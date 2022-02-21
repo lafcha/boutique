@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <h1 class="text-center">PANIER</h1>
 =======
 
@@ -30,9 +31,15 @@ foreach ($productsInCart as $product) :
             <p class="card-text">Prix total produit = <?= $product['totalPrice']; ?> €</p>
         </div>
 =======
+=======
+<h2 class="text-center">PANIER</h2>
+<?php
 
+>>>>>>> a5296e570826d5f821bc879c9205c6cd785a1da7
+
+foreach ( $productsInCart as $product) :
 ?>
-    <h2 class="text-center">PANIER</h2>
+
 
 <div class="card" >
     <div class="card-body">

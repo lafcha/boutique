@@ -1,5 +1,4 @@
 <h2 class="text-center py-4"> Nos derniers produits </h2>
-<?php xdebug_var_dump($_SESSION) ?>
 <div class="container">
     <div class="row row-cols-1 row-cols-md-4 g-3">
         <?php foreach ($productsData as $index => $product): ?>
