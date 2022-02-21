@@ -10,7 +10,9 @@ foreach ($productsInCart as $product) :
             <p class="card-text">prix TTC = <?= $product['price']; ?> €</p>
             <p class="card-text">Quantite produit =
             <form method="post" action="http://boutique.local/?action=cart">
-                <input type="number" name="quantity" value="<?php if (!isset($refreshQuantity)) : echo $product['quantity']; else : echo $newDataQuantity;  endif; ?>">
+                <input type="number" name="quantity" value="<?php echo $product['quantity']; ?>">
+                <input type="hidden" name="productId" value="<?=$product['id']?>">
+                <input type="hidden" name="update" value="1">
                 <input type="submit" value="Actualiser" name="Submit">
             </form>
             </p>
