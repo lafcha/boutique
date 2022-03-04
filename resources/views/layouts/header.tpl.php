@@ -32,20 +32,21 @@ require 'app/controllers/categoriesController.php'
 
         <nav class="navbar navbar-expand-lg navbar-light d-flex flex-row flex translate-middle-y mt-5">
             <ul class="navbar-nav">
-                <?php foreach ($printCategory as $category): ?>
+                <?php foreach ($_SESSION['categorie'] as $name => $category): ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-success" href="#" id="navbarDropdownMenuLink" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <?= $category['name']; ?>
+                        <?= $name;
+                        $printProductByCategory = printProductByCategory($bdd, $category); ?>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <?php foreach ($breads as $rows => $bread) { ?>
+                        <?php for ($i=0; $i < count($printProductByCategory); $i++) { ?>
                             <li><a class="dropdown-item"
-                                   href="http://boutique.local/?action=productPage&id=<?= $bread['id'] ?>"><?= $bread['name'] ?></a>
+                                   href="http://boutique.local/?action=productPage&id=<?= $printProductByCategory[$i]['id'] ?>"><?= $printProductByCategory[$i]['name'] ?></a>
                             </li>
                         <?php } ?>
                     </ul>
-                    <?php endforeach;?>
+                    <?php endforeach; ?>
                 </li>
                 <li><a href="http://boutique.local/?action=cart">
                         <div class="cart-pill2"></div>
